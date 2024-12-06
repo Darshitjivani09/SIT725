@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materialize Example</title>
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="green">
+    <div class="div1">
+        <ul class="ul1">
+          <li><a class="link" href= "#">Home</a></li>
+          <li><a class="link" href= "#about">About</a></li>
+          <li><a class="link" href= "#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="nav-wrapper container">
+      
+    </div>
+  </nav>
+  <ul class="demo" id="mobile-demo">
+  </ul>
+  <!-- Features Section -->
+  <div class="container section" id="features">
+    <h3>Examples</h3>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Example 1  <a class="waves-effect btn modal-trigger"  href="#popupModal" style="margin-left: 190px;">Click Here..</a></span>
+            
+            <p>Our app offers a seamless user experience with modern tools and features.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="popupModal" class="modal">
+    <div class="modal-content">
+      <h4>Example 1</h4>
+      <p>Our app offers a seamless user experience with modern tools and features.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+
+  <div class="input-field col s6">
+    <input id="title" type="text">
+    <label for="title">title</label>
+  </div>
+  <div class="input-field col s6">
+    <input id="path" type="text">
+    <label for="path">path</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <input id="subTitle" type="text">
+    <label for="subTitle">subTitle</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12">
+    <input id="description" type="text">
+    <label for="description">description</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s12 center-align">
+    <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="green page-footer footer", style="position:fixed; left: 0; bottom: 0; width: 100%;">
+    <div class="container">
+      <p class="white-text">&copy; 2024 WebApp</p>
+    </div>
+  </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Custom JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize all modals
+      const modals = document.querySelectorAll('.modal');
+      M.Modal.init(modals);
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

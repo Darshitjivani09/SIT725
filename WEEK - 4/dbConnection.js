@@ -1,31 +1,10 @@
 const { MongoClient } = require("mongodb");
+const uri = "mongodb+srv://s224749274:Djivani23@cluster0.i3djr.mongodb.net/"; // Replace with your MongoDB URI
 
-// Replace the uri string with your connection string.
-const uri = `mongodb+srv://s224749274:Djivani23@cluster0.i3djr.mongodb.net/`;
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-const client = new MongoClient(uri);
+client.connect()
+  .then(() => console.log("MongoDB connected successfully"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 
-async function run() {
-  try {
-    const database = client.db('darshitsdb');
-    const user = database.collection('users');
-
-    // Query for a get record of collection
-    const userdata = await user.findOne();
-
-    var mobj = { fName: "Darshit", lName: "jivani" };
-
-    user.insertOne(mobj, function(err, res) {
-        if (err) throw err;
-        console.log("1 line inserted");
-        db.close();
-      });
-    
-
-    console.log(userdata);
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+module.exports = client;
