@@ -1,0 +1,39 @@
+/* Custom Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .nav-wrapper {
+    padding: 0 20px;
+  }
+  
+  h3 {
+    color: #1565c0;
+  }
+  
+  .card {
+    border: 1px solid #7e800e;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-footer {
+    padding: 10px 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+  }
+
+  .div1
+  {
+    background:transparent;
+  }
+
+  .footer
+  {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  
